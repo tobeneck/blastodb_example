@@ -1,33 +1,554 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Subtypes — BlastoDB</title>
-  <meta name="description" content="Explore the known subtypes of Blastocystis, their host ranges, and geographic distribution.">
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Subtypes — BlastoDB</title>
+        <meta
+            name="description"
+            content="Explore Blastocystis subtypes ST1–ST7 with images and downloadable FASTA reference sequences."
+        />
+        <link rel="stylesheet" href="css/style.css" />
+    </head>
+    <body>
+        <div id="nav-placeholder"></div>
 
-<div id="nav-placeholder"></div>
+        <div class="page-hero">
+            <h1>Subtypes</h1>
+            <p>
+                An example subtype reference page with real downloadable data
+                (FASTA) plus illustrative images. Subtypes are typically
+                assigned by sequence-based typing (e.g., SSU rRNA barcoding).
+            </p>
+        </div>
 
-<div class="page-hero">
-  <h1>Subtypes</h1>
-  <p>Explore the known subtypes of Blastocystis, their host ranges, and geographic distribution.</p>
-</div>
+        <section class="section">
+            <p class="section-title">Subtype Overview (ST1–ST7)</p>
+            <p class="section-sub">
+                Below you’ll find short, conservative descriptions for common
+                subtypes (ST1–ST7), along with the same FASTA files linked from
+                <a
+                    href="https://www.blastodb.com/subtypes"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >blastodb.com/subtypes</a
+                >. Culture microbiome / metabolome downloads are shown as
+                “coming soon” because the original links are currently empty.
+            </p>
 
-<section class="section">
-  <div class="placeholder-box">
-    <svg style="width:40px;height:40px;stroke:var(--teal);fill:none;stroke-width:1.5;margin-bottom:1rem;" viewBox="0 0 24 24">
-      <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
-    </svg>
-    <h3>Subtype reference</h3>
-    <p style="font-size:0.9rem; margin-top:0.4rem; max-width:480px; margin-left:auto; margin-right:auto; line-height:1.65;">This section will provide a structured overview of all known Blastocystis subtypes (ST1–ST17+), including host specificity, prevalence data, and phylogenetic relationships.</p>
-    <a class="btn" href="contact.html" style="margin-top:1.5rem; display:inline-block;">Contact us to contribute</a>
-  </div>
-</section>
+            <div class="callout">
+                <strong>Downloads:</strong>
+                You can download individual subtype FASTA files, or a combined
+                file containing ST1–ST7 (36 sequences total).
+                <div class="subtype-actions" style="margin-top: 0.8rem">
+                    <a
+                        class="btn btn-sm"
+                        href="data/fasta/Blastocystis_ST1-7.fasta"
+                        download
+                        >Download combined FASTA (ST1–ST7)</a
+                    >
+                    <a
+                        class="btn btn-outline btn-sm"
+                        href="data/fasta/Blastocystis_ST1-7.fasta"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        >View combined FASTA</a
+                    >
+                </div>
+            </div>
 
-<div id="footer-placeholder"></div>
-<script src="js/shared.js"></script>
-</body>
+            <div class="subtype-toc" aria-label="Subtype quick navigation">
+                <a class="chip" href="#st1">ST1</a>
+                <a class="chip" href="#st2">ST2</a>
+                <a class="chip" href="#st3">ST3</a>
+                <a class="chip" href="#st4">ST4</a>
+                <a class="chip" href="#st5">ST5</a>
+                <a class="chip" href="#st6">ST6</a>
+                <a class="chip" href="#st7">ST7</a>
+            </div>
+
+            <div class="subtype-grid">
+                <article class="subtype-card" id="st1">
+                    <h2>Subtype 1 (ST1)</h2>
+                    <div class="subtype-meta">
+                        Commonly reported in humans; also detected across a
+                        range of mammals. FASTA: 5 sequences.
+                    </div>
+                    <div class="subtype-body">
+                        <figure class="subtype-figure" tabindex="0">
+                            <img
+                                class="subtype-img"
+                                src="images/subtypes/ST1.jpg"
+                                alt="Illustrative image for Blastocystis subtype 1"
+                            />
+                            <figcaption class="subtype-caption">
+                                Image credit: subtype1.jpg (credit not specified
+                                on source page).
+                            </figcaption>
+                        </figure>
+                        <div>
+                            <p>
+                                ST1 is one of the frequently detected
+                                <em>Blastocystis</em> subtypes in human studies.
+                                It has also been reported from non-human hosts,
+                                which means zoonotic transmission is plausible
+                                in some settings.
+                            </p>
+
+                            <div class="subtype-actions">
+                                <a
+                                    class="btn btn-sm"
+                                    href="data/fasta/Blastocystis_ST1.fasta"
+                                    download
+                                    >Download FASTA</a
+                                >
+                                <a
+                                    class="btn btn-outline btn-sm"
+                                    href="data/fasta/Blastocystis_ST1.fasta"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    >View FASTA</a
+                                >
+                                <a
+                                    class="btn btn-outline btn-sm btn-disabled"
+                                    href="#"
+                                    aria-disabled="true"
+                                    onclick="return false;"
+                                    >Culture microbiome (coming soon)</a
+                                >
+                                <a
+                                    class="btn btn-outline btn-sm btn-disabled"
+                                    href="#"
+                                    aria-disabled="true"
+                                    onclick="return false;"
+                                    >Culture metabolome (coming soon)</a
+                                >
+                            </div>
+
+                            <details
+                                class="fasta-details"
+                                data-fasta-src="data/fasta/Blastocystis_ST1.fasta"
+                            >
+                                <summary>Show FASTA sequences (ST1)</summary>
+                                <pre class="fasta-pre">(Click to load)</pre>
+                            </details>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="subtype-card" id="st2">
+                    <h2>Subtype 2 (ST2)</h2>
+                    <div class="subtype-meta">
+                        Reported in humans; also detected in other mammals in
+                        multiple surveys. FASTA: 5 sequences.
+                    </div>
+                    <div class="subtype-body">
+                        <figure class="subtype-figure" tabindex="0">
+                            <img
+                                class="subtype-img"
+                                src="images/subtypes/ST2.jpg"
+                                alt="Illustrative image for Blastocystis subtype 2"
+                            />
+                            <figcaption class="subtype-caption">
+                                Image credit: Vogelberg et al. (2010).
+                            </figcaption>
+                        </figure>
+                        <div>
+                            <p>
+                                ST2 is commonly included among the subtypes
+                                detected in humans. Like ST1, it has been
+                                reported from non-human hosts, so host-to-host
+                                transmission may vary by environment and contact
+                                patterns.
+                            </p>
+
+                            <div class="subtype-actions">
+                                <a
+                                    class="btn btn-sm"
+                                    href="data/fasta/Blastocystis_ST2.fasta"
+                                    download
+                                    >Download FASTA</a
+                                >
+                                <a
+                                    class="btn btn-outline btn-sm"
+                                    href="data/fasta/Blastocystis_ST2.fasta"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    >View FASTA</a
+                                >
+                                <a
+                                    class="btn btn-outline btn-sm btn-disabled"
+                                    href="#"
+                                    aria-disabled="true"
+                                    onclick="return false;"
+                                    >Culture microbiome (coming soon)</a
+                                >
+                                <a
+                                    class="btn btn-outline btn-sm btn-disabled"
+                                    href="#"
+                                    aria-disabled="true"
+                                    onclick="return false;"
+                                    >Culture metabolome (coming soon)</a
+                                >
+                            </div>
+
+                            <details
+                                class="fasta-details"
+                                data-fasta-src="data/fasta/Blastocystis_ST2.fasta"
+                            >
+                                <summary>Show FASTA sequences (ST2)</summary>
+                                <pre class="fasta-pre">(Click to load)</pre>
+                            </details>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="subtype-card" id="st3">
+                    <h2>Subtype 3 (ST3)</h2>
+                    <div class="subtype-meta">
+                        Often among the most frequently detected subtypes in
+                        human cohorts. FASTA: 4 sequences.
+                    </div>
+                    <div class="subtype-body">
+                        <figure class="subtype-figure" tabindex="0">
+                            <img
+                                class="subtype-img"
+                                src="images/subtypes/ST3.png"
+                                alt="Illustrative image for Blastocystis subtype 3"
+                            />
+                            <figcaption class="subtype-caption">
+                                Image credit: Kaur et al. (2023).
+                            </figcaption>
+                        </figure>
+                        <div>
+                            <p>
+                                ST3 is frequently reported in human studies and
+                                is sometimes described as relatively
+                                “human-associated” compared to some other
+                                subtypes, although host distributions vary
+                                across regions and sampling.
+                            </p>
+
+                            <div class="subtype-actions">
+                                <a
+                                    class="btn btn-sm"
+                                    href="data/fasta/Blastocystis_ST3.fasta"
+                                    download
+                                    >Download FASTA</a
+                                >
+                                <a
+                                    class="btn btn-outline btn-sm"
+                                    href="data/fasta/Blastocystis_ST3.fasta"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    >View FASTA</a
+                                >
+                                <a
+                                    class="btn btn-outline btn-sm btn-disabled"
+                                    href="#"
+                                    aria-disabled="true"
+                                    onclick="return false;"
+                                    >Culture microbiome (coming soon)</a
+                                >
+                                <a
+                                    class="btn btn-outline btn-sm btn-disabled"
+                                    href="#"
+                                    aria-disabled="true"
+                                    onclick="return false;"
+                                    >Culture metabolome (coming soon)</a
+                                >
+                            </div>
+
+                            <details
+                                class="fasta-details"
+                                data-fasta-src="data/fasta/Blastocystis_ST3.fasta"
+                            >
+                                <summary>Show FASTA sequences (ST3)</summary>
+                                <pre class="fasta-pre">(Click to load)</pre>
+                            </details>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="subtype-card" id="st4">
+                    <h2>Subtype 4 (ST4)</h2>
+                    <div class="subtype-meta">
+                        Detected in humans and non-human hosts; prevalence can
+                        be region-dependent. FASTA: 4 sequences.
+                    </div>
+                    <div class="subtype-body">
+                        <figure class="subtype-figure" tabindex="0">
+                            <img
+                                class="subtype-img"
+                                src="images/subtypes/ST4.png"
+                                alt="Illustrative image for Blastocystis subtype 4"
+                            />
+                            <figcaption class="subtype-caption">
+                                Image credit: Tan (2008).
+                            </figcaption>
+                        </figure>
+                        <div>
+                            <p>
+                                ST4 is reported in humans in multiple studies
+                                and is also detected in non-human hosts.
+                                Geographic and host patterns can differ
+                                substantially across datasets.
+                            </p>
+
+                            <div class="subtype-actions">
+                                <a
+                                    class="btn btn-sm"
+                                    href="data/fasta/Blastocystis_ST4.fasta"
+                                    download
+                                    >Download FASTA</a
+                                >
+                                <a
+                                    class="btn btn-outline btn-sm"
+                                    href="data/fasta/Blastocystis_ST4.fasta"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    >View FASTA</a
+                                >
+                                <a
+                                    class="btn btn-outline btn-sm btn-disabled"
+                                    href="#"
+                                    aria-disabled="true"
+                                    onclick="return false;"
+                                    >Culture microbiome (coming soon)</a
+                                >
+                                <a
+                                    class="btn btn-outline btn-sm btn-disabled"
+                                    href="#"
+                                    aria-disabled="true"
+                                    onclick="return false;"
+                                    >Culture metabolome (coming soon)</a
+                                >
+                            </div>
+
+                            <details
+                                class="fasta-details"
+                                data-fasta-src="data/fasta/Blastocystis_ST4.fasta"
+                            >
+                                <summary>Show FASTA sequences (ST4)</summary>
+                                <pre class="fasta-pre">(Click to load)</pre>
+                            </details>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="subtype-card" id="st5">
+                    <h2>Subtype 5 (ST5)</h2>
+                    <div class="subtype-meta">
+                        Often associated with livestock (commonly reported in
+                        pigs and other hoofed animals); occasionally reported in
+                        humans. FASTA: 6 sequences.
+                    </div>
+                    <div class="subtype-body">
+                        <figure class="subtype-figure" tabindex="0">
+                            <img
+                                class="subtype-img"
+                                src="images/subtypes/ST5.png"
+                                alt="Placeholder image for Blastocystis subtype 5"
+                            />
+                            <figcaption class="subtype-caption">
+                                Image credit: “chatGPT” (placeholder image on
+                                source site).
+                            </figcaption>
+                        </figure>
+                        <div>
+                            <p>
+                                ST5 is frequently discussed as a subtype
+                                commonly detected in certain livestock hosts.
+                                Human detection is reported less often than for
+                                ST1–ST4 in many cohorts.
+                            </p>
+
+                            <div class="subtype-actions">
+                                <a
+                                    class="btn btn-sm"
+                                    href="data/fasta/Blastocystis_ST5.fasta"
+                                    download
+                                    >Download FASTA</a
+                                >
+                                <a
+                                    class="btn btn-outline btn-sm"
+                                    href="data/fasta/Blastocystis_ST5.fasta"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    >View FASTA</a
+                                >
+                                <a
+                                    class="btn btn-outline btn-sm btn-disabled"
+                                    href="#"
+                                    aria-disabled="true"
+                                    onclick="return false;"
+                                    >Culture microbiome (coming soon)</a
+                                >
+                                <a
+                                    class="btn btn-outline btn-sm btn-disabled"
+                                    href="#"
+                                    aria-disabled="true"
+                                    onclick="return false;"
+                                    >Culture metabolome (coming soon)</a
+                                >
+                            </div>
+
+                            <details
+                                class="fasta-details"
+                                data-fasta-src="data/fasta/Blastocystis_ST5.fasta"
+                            >
+                                <summary>Show FASTA sequences (ST5)</summary>
+                                <pre class="fasta-pre">(Click to load)</pre>
+                            </details>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="subtype-card" id="st6">
+                    <h2>Subtype 6 (ST6)</h2>
+                    <div class="subtype-meta">
+                        Often associated with avian hosts; sometimes detected in
+                        humans. FASTA: 5 sequences.
+                    </div>
+                    <div class="subtype-body">
+                        <figure class="subtype-figure" tabindex="0">
+                            <img
+                                class="subtype-img"
+                                src="images/subtypes/ST6.jpg"
+                                alt="Illustrative image for Blastocystis subtype 6"
+                            />
+                            <figcaption class="subtype-caption">
+                                Image credit: Chandrasekaran et al. (2014).
+                            </figcaption>
+                        </figure>
+                        <div>
+                            <p>
+                                ST6 is frequently reported from birds in the
+                                literature and is also detected in humans in
+                                some datasets. Host ecology and sampling
+                                strategy strongly influence reported
+                                frequencies.
+                            </p>
+
+                            <div class="subtype-actions">
+                                <a
+                                    class="btn btn-sm"
+                                    href="data/fasta/Blastocystis_ST6.fasta"
+                                    download
+                                    >Download FASTA</a
+                                >
+                                <a
+                                    class="btn btn-outline btn-sm"
+                                    href="data/fasta/Blastocystis_ST6.fasta"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    >View FASTA</a
+                                >
+                                <a
+                                    class="btn btn-outline btn-sm btn-disabled"
+                                    href="#"
+                                    aria-disabled="true"
+                                    onclick="return false;"
+                                    >Culture microbiome (coming soon)</a
+                                >
+                                <a
+                                    class="btn btn-outline btn-sm btn-disabled"
+                                    href="#"
+                                    aria-disabled="true"
+                                    onclick="return false;"
+                                    >Culture metabolome (coming soon)</a
+                                >
+                            </div>
+
+                            <details
+                                class="fasta-details"
+                                data-fasta-src="data/fasta/Blastocystis_ST6.fasta"
+                            >
+                                <summary>Show FASTA sequences (ST6)</summary>
+                                <pre class="fasta-pre">(Click to load)</pre>
+                            </details>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="subtype-card" id="st7">
+                    <h2>Subtype 7 (ST7)</h2>
+                    <div class="subtype-meta">
+                        Often associated with avian hosts; sometimes detected in
+                        humans. FASTA: 10 sequences.
+                    </div>
+                    <div class="subtype-body">
+                        <figure class="subtype-figure" tabindex="0">
+                            <img
+                                class="subtype-img"
+                                src="images/subtypes/ST7.jpg"
+                                alt="Illustrative image for Blastocystis subtype 7"
+                            />
+                            <figcaption class="subtype-caption">
+                                Image credit: Yason and Tan (2018).
+                            </figcaption>
+                        </figure>
+                        <div>
+                            <p>
+                                ST7 is frequently discussed in relation to
+                                bird-associated reservoirs and has also been
+                                detected in human samples. As with other
+                                subtypes, prevalence depends on study population
+                                and region.
+                            </p>
+
+                            <div class="subtype-actions">
+                                <a
+                                    class="btn btn-sm"
+                                    href="data/fasta/Blastocystis_ST7.fasta"
+                                    download
+                                    >Download FASTA</a
+                                >
+                                <a
+                                    class="btn btn-outline btn-sm"
+                                    href="data/fasta/Blastocystis_ST7.fasta"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    >View FASTA</a
+                                >
+                                <a
+                                    class="btn btn-outline btn-sm btn-disabled"
+                                    href="#"
+                                    aria-disabled="true"
+                                    onclick="return false;"
+                                    >Culture microbiome (coming soon)</a
+                                >
+                                <a
+                                    class="btn btn-outline btn-sm btn-disabled"
+                                    href="#"
+                                    aria-disabled="true"
+                                    onclick="return false;"
+                                    >Culture metabolome (coming soon)</a
+                                >
+                            </div>
+
+                            <details
+                                class="fasta-details"
+                                data-fasta-src="data/fasta/Blastocystis_ST7.fasta"
+                            >
+                                <summary>Show FASTA sequences (ST7)</summary>
+                                <pre class="fasta-pre">(Click to load)</pre>
+                            </details>
+                        </div>
+                    </div>
+                </article>
+
+                <div class="callout" style="margin-top: 1.5rem">
+                    <strong>Note on interpretation:</strong>
+                    subtype naming reflects genetic clustering and is usually
+                    determined from sequence data. Morphology alone is generally
+                    not sufficient to subtype isolates reliably.
+                </div>
+            </div>
+        </section>
+
+        <div id="footer-placeholder"></div>
+        <script src="js/shared.js"></script>
+        <script src="js/subtypes.js"></script>
+    </body>
 </html>
