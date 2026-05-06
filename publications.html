@@ -22,23 +22,17 @@
         </div>
 
         <section class="section">
-            <div class="pub-header">
-                <h2 class="section-title">Publication database</h2>
-                <p class="section-sub">
-                    Filter by tags to explore the latest Blastocystis
-                    literature. Tags match any selected filter.
-                </p>
-            </div>
-
             <div class="pub-controls">
                 <div class="pub-filter-group">
-                    <span class="pub-filter-label">Filter by tags</span>
+                    <label class="pub-filter-label" for="pub-filter-toggle"
+                        >Select Tags</label
+                    >
                     <div class="pub-filters" id="pub-filters"></div>
                 </div>
                 <div class="pub-count" id="pub-count" aria-live="polite"></div>
             </div>
 
-            <div class="pub-grid" id="pub-list"></div>
+            <div class="news-list pub-list" id="pub-list"></div>
             <div class="pub-empty" id="pub-empty" hidden>
                 No publications match these tags yet.
             </div>

@@ -716,36 +716,84 @@ details.fasta-details summary:hover {
 }
 
 .pub-filters {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
+    position: relative;
 }
 
-.pub-filter-btn {
+.pub-filter-dropdown {
+    position: relative;
+}
+
+.pub-filter-toggle {
     border: 1px solid var(--border);
     background: var(--sand);
     color: var(--ink-soft);
-    padding: 0.35rem 0.75rem;
+    padding: 0.4rem 0.85rem;
     border-radius: 999px;
-    font-size: 0.75rem;
+    font-size: 0.78rem;
     font-weight: 500;
     cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
     transition:
         border-color 0.15s,
         color 0.15s,
-        background 0.15s;
+        background 0.15s,
+        box-shadow 0.15s;
 }
 
-.pub-filter-btn:hover {
+.pub-filter-toggle::after {
+    content: "▾";
+    font-size: 0.7rem;
+    color: var(--muted);
+}
+
+.pub-filter-toggle:hover,
+.pub-filter-toggle[aria-expanded="true"] {
     border-color: var(--teal);
     color: var(--teal);
-}
-
-.pub-filter-btn.active,
-.pub-filter-btn[aria-pressed="true"] {
     background: var(--teal-light);
-    border-color: var(--teal);
-    color: var(--teal);
+}
+
+.pub-filter-toggle[aria-expanded="true"] {
+    box-shadow: 0 4px 12px rgba(14, 107, 90, 0.12);
+}
+
+.pub-filter-menu {
+    position: absolute;
+    top: calc(100% + 0.6rem);
+    left: 0;
+    min-width: 220px;
+    padding: 0.65rem;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    box-shadow: 0 12px 28px rgba(14, 107, 90, 0.12);
+    display: none;
+    z-index: 20;
+}
+
+.pub-filter-menu.open {
+    display: block;
+}
+
+.pub-filter-option {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.82rem;
+    color: var(--ink-soft);
+    padding: 0.35rem 0.35rem;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.pub-filter-option input {
+    accent-color: var(--teal);
+}
+
+.pub-filter-option:hover {
+    background: var(--sand);
 }
 
 .pub-count {
@@ -753,40 +801,28 @@ details.fasta-details summary:hover {
     color: var(--muted);
 }
 
-.pub-grid {
+.pub-list {
     display: flex;
     flex-direction: column;
-    gap: 1.4rem;
+    gap: 1.5rem;
 }
 
 .pub-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.pub-image {
     border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 1.4rem;
-    background: var(--white);
-    display: grid;
-    grid-template-columns: 160px 1fr;
-    gap: 1.4rem;
-    align-items: start;
-}
-
-.pub-card.no-image {
-    grid-template-columns: 1fr;
-}
-
-.pub-card:focus-within {
-    border-color: rgba(14, 107, 90, 0.45);
-    box-shadow: 0 4px 14px rgba(14, 107, 90, 0.1);
+    border-radius: 10px;
+    background: var(--sand);
+    overflow: hidden;
 }
 
 .pub-image img {
     width: 100%;
-    height: 100%;
-    max-height: 180px;
-    object-fit: cover;
-    border-radius: 10px;
-    border: 1px solid var(--border);
-    background: var(--sand);
+    height: auto;
     display: block;
 }
 
@@ -856,13 +892,5 @@ details.fasta-details summary:hover {
 @media (max-width: 800px) {
     .subtype-body {
         grid-template-columns: 1fr;
-    }
-
-    .pub-card {
-        grid-template-columns: 1fr;
-    }
-
-    .pub-image img {
-        max-height: 240px;
     }
 }
