@@ -566,12 +566,18 @@ footer strong {
 .subtype-figure {
     position: relative;
     margin: 0;
+
+    /* Override per-figure if needed, e.g. style="--credit-radius: 12px;" */
+    --credit-radius: 10px;
+
+    border-radius: var(--credit-radius);
+    overflow: hidden;
 }
 
 .subtype-figure:focus {
     outline: 2px solid rgba(14, 107, 90, 0.5);
     outline-offset: 3px;
-    border-radius: 12px;
+    border-radius: var(--credit-radius);
 }
 
 .subtype-caption {
@@ -580,8 +586,8 @@ footer strong {
     right: 0;
     bottom: 0;
     padding: 0.6rem 0.75rem;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: var(--credit-radius);
+    border-bottom-right-radius: var(--credit-radius);
     background: linear-gradient(
         180deg,
         rgba(11, 15, 14, 0) 0%,
