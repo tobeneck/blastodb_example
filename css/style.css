@@ -688,8 +688,181 @@ details.fasta-details summary:hover {
     border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
+/* ── PUBLICATIONS ── */
+.pub-header {
+    margin-bottom: 1.5rem;
+}
+
+.pub-controls {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1.6rem;
+}
+
+.pub-filter-group {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.65rem;
+}
+
+.pub-filter-label {
+    font-size: 0.82rem;
+    color: var(--muted);
+    font-weight: 500;
+}
+
+.pub-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.pub-filter-btn {
+    border: 1px solid var(--border);
+    background: var(--sand);
+    color: var(--ink-soft);
+    padding: 0.35rem 0.75rem;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition:
+        border-color 0.15s,
+        color 0.15s,
+        background 0.15s;
+}
+
+.pub-filter-btn:hover {
+    border-color: var(--teal);
+    color: var(--teal);
+}
+
+.pub-filter-btn.active,
+.pub-filter-btn[aria-pressed="true"] {
+    background: var(--teal-light);
+    border-color: var(--teal);
+    color: var(--teal);
+}
+
+.pub-count {
+    font-size: 0.82rem;
+    color: var(--muted);
+}
+
+.pub-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
+}
+
+.pub-card {
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.4rem;
+    background: var(--white);
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    gap: 1.4rem;
+    align-items: start;
+}
+
+.pub-card.no-image {
+    grid-template-columns: 1fr;
+}
+
+.pub-card:focus-within {
+    border-color: rgba(14, 107, 90, 0.45);
+    box-shadow: 0 4px 14px rgba(14, 107, 90, 0.1);
+}
+
+.pub-image img {
+    width: 100%;
+    height: 100%;
+    max-height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    background: var(--sand);
+    display: block;
+}
+
+.pub-title {
+    font-family: "Crimson Pro", serif;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 0.4rem;
+    line-height: 1.3;
+}
+
+.pub-meta {
+    font-size: 0.86rem;
+    color: var(--muted);
+    margin-bottom: 0.55rem;
+}
+
+.pub-authors {
+    font-size: 0.9rem;
+    color: var(--ink-soft);
+    margin-bottom: 0.6rem;
+}
+
+.pub-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+    margin-top: 0.4rem;
+}
+
+.pub-tag {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.25rem 0.6rem;
+    border-radius: 999px;
+    background: var(--teal-light);
+    color: var(--teal);
+    font-size: 0.72rem;
+    font-weight: 500;
+}
+
+.pub-actions {
+    margin-top: 0.75rem;
+}
+
+.pub-link {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--teal);
+    text-decoration: none;
+}
+
+.pub-link:hover {
+    text-decoration: underline;
+}
+
+.pub-empty {
+    border: 1.5px dashed var(--border);
+    border-radius: 10px;
+    padding: 1.2rem 1.5rem;
+    text-align: center;
+    color: var(--muted);
+    background: var(--sand);
+}
+
 @media (max-width: 800px) {
     .subtype-body {
         grid-template-columns: 1fr;
+    }
+
+    .pub-card {
+        grid-template-columns: 1fr;
+    }
+
+    .pub-image img {
+        max-height: 240px;
     }
 }

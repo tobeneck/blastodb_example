@@ -1,0 +1,40 @@
+{
+  "tagOptions": [
+    "clynical trial",
+    "prevalence",
+    "microbiome",
+    "journal article"
+  ],
+  "publications": [
+    {
+      "title": "Single-celled organisms set for greater role in gut health",
+      "venue": "Nature Outlooks",
+      "date": "19 June 2025",
+      "authors": [],
+      "tags": ["microbiome", "journal article"],
+      "url": "https://www.nature.com/articles/d41586-025-01916-0?utm_source=Live+Audience&utm_campaign=f7a1d082aa-nature-briefing-daily-20250620&utm_medium=email&utm_term=0_-33f35e09ea-51942656",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "title": "Blastocystis: A Mysterious Member of the Gut Microbiome",
+      "venue": "Microorganisms",
+      "date": "February 2024",
+      "authors": [],
+      "tags": ["microbiome", "journal article"],
+      "url": "https://www.mdpi.com/2076-2607/12/3/461",
+      "image": "",
+      "imageAlt": ""
+    },
+    {
+      "title": "Advancing research on Blastocystis through a One Health approach",
+      "venue": "Open research Europe",
+      "date": "July 2024",
+      "authors": [],
+      "tags": ["journal article"],
+      "url": "https://open-research-europe.ec.europa.eu/articles/4-145/v1",
+      "image": "",
+      "imageAlt": ""
+    }
+  ]
+}

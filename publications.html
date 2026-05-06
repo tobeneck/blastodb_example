@@ -1,33 +1,56 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Publications — BlastoDB</title>
-  <meta name="description" content="Browse peer-reviewed publications related to Blastocystis research, subtypes, and genomics.">
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Publications — BlastoDB</title>
+        <meta
+            name="description"
+            content="Browse peer-reviewed publications related to Blastocystis research, subtypes, and genomics."
+        />
+        <link rel="stylesheet" href="css/style.css" />
+    </head>
+    <body>
+        <div id="nav-placeholder"></div>
 
-<div id="nav-placeholder"></div>
+        <div class="page-hero">
+            <h1>Publications</h1>
+            <p>
+                Browse peer-reviewed publications related to Blastocystis
+                research, subtypes, and genomics.
+            </p>
+        </div>
 
-<div class="page-hero">
-  <h1>Publications</h1>
-  <p>Browse peer-reviewed publications related to Blastocystis research, subtypes, and genomics.</p>
-</div>
+        <section class="section">
+            <div class="pub-header">
+                <h2 class="section-title">Publication database</h2>
+                <p class="section-sub">
+                    Filter by tags to explore the latest Blastocystis
+                    literature. Tags match any selected filter.
+                </p>
+            </div>
 
-<section class="section">
-  <div class="placeholder-box">
-    <svg style="width:40px;height:40px;stroke:var(--teal);fill:none;stroke-width:1.5;margin-bottom:1rem;" viewBox="0 0 24 24">
-      <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
-    </svg>
-    <h3>Database of Blastocystis publications</h3>
-    <p style="font-size:0.9rem; margin-top:0.4rem; max-width:480px; margin-left:auto; margin-right:auto; line-height:1.65;">A searchable catalogue of key publications covering Blastocystis biology, subtypes, genomics, and clinical relevance is coming soon.</p>
-    <a class="btn" href="contact.html" style="margin-top:1.5rem; display:inline-block;">Contact us to contribute</a>
-  </div>
-</section>
+            <div class="pub-controls">
+                <div class="pub-filter-group">
+                    <span class="pub-filter-label">Filter by tags</span>
+                    <div class="pub-filters" id="pub-filters"></div>
+                </div>
+                <div class="pub-count" id="pub-count" aria-live="polite"></div>
+            </div>
 
-<div id="footer-placeholder"></div>
-<script src="js/shared.js"></script>
-</body>
+            <div class="pub-grid" id="pub-list"></div>
+            <div class="pub-empty" id="pub-empty" hidden>
+                No publications match these tags yet.
+            </div>
+            <noscript>
+                <div class="pub-empty">
+                    Enable JavaScript to view the publications list.
+                </div>
+            </noscript>
+        </section>
+
+        <div id="footer-placeholder"></div>
+        <script src="js/shared.js"></script>
+        <script src="js/publications.js"></script>
+    </body>
 </html>
