@@ -263,8 +263,11 @@ nav {
     transition: border-color 0.15s;
 }
 
-.news-card:hover {
+/* Cards are not fully clickable; avoid implying clickability on hover.
+   Instead, highlight when a user focuses a link/button inside the card. */
+.news-card:focus-within {
     border-color: var(--teal);
+    box-shadow: 0 4px 14px rgba(14, 107, 90, 0.1);
 }
 
 .news-tag {
@@ -530,8 +533,11 @@ footer strong {
     background: var(--white);
 }
 
-.subtype-card:hover {
+/* Subtype cards contain controls, but the card itself is not a link.
+   Avoid hover styling that suggests the whole card is clickable. */
+.subtype-card:focus-within {
     border-color: rgba(14, 107, 90, 0.45);
+    box-shadow: 0 4px 14px rgba(14, 107, 90, 0.1);
 }
 
 .subtype-card h2 {
