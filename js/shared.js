@@ -2,8 +2,8 @@
 const NAV_HTML = `
 <nav>
   <a class="nav-logo" href="index.html">
-    <img src="https://images.squarespace-cdn.com/content/v1/689c6545c94b4240bd6c83f4/53bf4175-906a-4ba8-9194-539b15f9bf77/logo-main%404x.jpg" alt="BlastoDB logo">
-    <span>BlastoDB</span>
+    <img src="images/logomark@4x.webp" alt="BlastoDB logo" height="300">
+    <span style="font-size:1.5em; "><em>BlastoDB</em></span>
   </a>
   <ul class="nav-links">
     <li><a href="index.html">Home</a></li>
@@ -25,15 +25,15 @@ const FOOTER_HTML = `
   Contact: <a href="mailto:A.Tsaousis@kent.ac.uk">A.Tsaousis@kent.ac.uk</a> · University of Kent, School of Biosciences
 </footer>`;
 
-document.addEventListener('DOMContentLoaded', () => {
-  const navEl = document.getElementById('nav-placeholder');
+document.addEventListener("DOMContentLoaded", () => {
+  const navEl = document.getElementById("nav-placeholder");
   if (navEl) navEl.outerHTML = NAV_HTML;
-  const footerEl = document.getElementById('footer-placeholder');
+  const footerEl = document.getElementById("footer-placeholder");
   if (footerEl) footerEl.outerHTML = FOOTER_HTML;
 
   // Highlight active link
-  const path = window.location.pathname.split('/').pop() || 'index.html';
-  document.querySelectorAll('.nav-links a').forEach(a => {
-    if (a.getAttribute('href') === path) a.classList.add('active');
+  const path = window.location.pathname.split("/").pop() || "index.html";
+  document.querySelectorAll(".nav-links a").forEach((a) => {
+    if (a.getAttribute("href") === path) a.classList.add("active");
   });
 });

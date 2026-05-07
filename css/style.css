@@ -83,6 +83,7 @@ nav {
     display: flex;
     align-items: center;
     gap: 0.15rem;
+    font-size: 1rem;
     list-style: none;
     flex-wrap: wrap;
     flex: 1;
@@ -90,7 +91,7 @@ nav {
 }
 
 .nav-links a {
-    font-size: 0.82rem;
+    font-size: 1rem;
     font-weight: 400;
     color: var(--ink-soft);
     padding: 0.35rem 0.65rem;
