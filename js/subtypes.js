@@ -283,6 +283,9 @@ const createSubtypeCard = (subtype, index, usedIds) => {
 
   const headder = document.createElement("div"); //displaying the title, tag, and download links
   headder.className = "subtype-card-headder"; //TODO: create styling that matches here!
+  headder.setAttribute("role", "button");
+  headder.setAttribute("tabindex", "0");
+  headder.setAttribute("aria-expanded", "false");
 
   const title = document.createElement("h2");
   title.textContent = titleText;
@@ -327,6 +330,8 @@ const createSubtypeCard = (subtype, index, usedIds) => {
 
   const body = document.createElement("div");
   body.className = "subtype-body";
+  body.id = `${cardId}-body`;
+  headder.setAttribute("aria-controls", body.id);
 
   if (imageSrc) {
     if (imageCredit) {
@@ -371,6 +376,27 @@ const createSubtypeCard = (subtype, index, usedIds) => {
 
   body.appendChild(content);
   card.appendChild(body);
+
+  const toggleCard = (nextState) => {
+    const isOpen =
+      typeof nextState === "boolean"
+        ? nextState
+        : !card.classList.contains("is-open");
+    card.classList.toggle("is-open", isOpen);
+    headder.setAttribute("aria-expanded", isOpen ? "true" : "false");
+  };
+
+  headder.addEventListener("click", (event) => {
+    if (event.target.closest(".subtype-actions a")) return;
+    toggleCard();
+  });
+
+  headder.addEventListener("keydown", (event) => {
+    if (event.key === "Enter" || event.key === " ") {
+      event.preventDefault();
+      toggleCard();
+    }
+  });
 
   return card;
 };

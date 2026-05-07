@@ -553,6 +553,32 @@ footer strong {
     grid-template-columns: auto 1fr auto;
     gap: 1rem;
     align-items: start;
+    cursor: pointer;
+}
+
+.subtype-toggle-indicator {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.75rem;
+    color: var(--muted);
+    white-space: nowrap;
+}
+
+.subtype-toggle-indicator::before {
+    content: "▸";
+    font-size: 0.9rem;
+    transition: transform 140ms ease;
+}
+
+.subtype-card.is-open .subtype-toggle-indicator::before {
+    transform: rotate(90deg);
+}
+
+.subtype-card-headder:focus {
+    outline: 2px solid rgba(14, 107, 90, 0.45);
+    outline-offset: 4px;
+    border-radius: 10px;
 }
 
 /* Subtype cards contain controls, but the card itself is not a link.
@@ -577,10 +603,15 @@ footer strong {
 }
 
 .subtype-body {
-    display: grid;
+    display: none;
     grid-template-columns: 220px 1fr;
     gap: 1.2rem;
     align-items: start;
+    margin-top: 1.2rem;
+}
+
+.subtype-card.is-open .subtype-body {
+    display: grid;
 }
 
 .subtype-img {
