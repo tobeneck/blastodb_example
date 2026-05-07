@@ -533,6 +533,13 @@ footer strong {
     background: var(--white);
 }
 
+.subtype-card-headder {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 1rem;
+    align-items: start;
+}
+
 /* Subtype cards contain controls, but the card itself is not a link.
    Avoid hover styling that suggests the whole card is clickable. */
 .subtype-card:focus-within {
@@ -632,7 +639,9 @@ footer strong {
     display: flex;
     flex-wrap: wrap;
     gap: 0.55rem;
-    margin: 0.9rem 0 0.45rem;
+    justify-content: center;
+    align-items: center;
+    //margin: 0.9rem 0 0.45rem;
 }
 
 .btn-sm {

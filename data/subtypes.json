@@ -1,10 +1,10 @@
 {
-  "tagOptions": ["human", "animal"],
+  "tagOptions": ["humans", "animals"],
   "subtypes": [
     {
       "id": "st1",
       "title": "Subtype 1",
-      "tags": ["human", "animal"],
+      "tags": ["humans", "animals"],
       "image": "images/subtypes/ST1.jpg",
       "imageAlt": "Illustrative image for Blastocystis subtype 1",
       "imageCredit": "",
@@ -16,7 +16,7 @@
     {
       "id": "st2",
       "title": "Subtype 2",
-      "tags": ["human", "animal"],
+      "tags": ["humans", "animals"],
       "image": "images/subtypes/ST2.jpg",
       "imageAlt": "Illustrative image for Blastocystis subtype 2",
       "imageCredit": "Vogelberg et al. (2010)",
@@ -28,19 +28,19 @@
     {
       "id": "st3",
       "title": "Subtype 3",
-      "tags": ["human", "animal"],
+      "tags": ["humans", "animals"],
       "image": "images/subtypes/ST3.png",
       "imageAlt": "Illustrative image for Blastocystis subtype 3",
       "imageCredit": "Kaur et al. (2023)",
       "fasta": "fasta/Blastocystis_ST3.fasta",
-      "culture_microbiome": "",
-      "culture_metabolome": "",
+      "culture_microbiome": "fasta/Blastocystis_ST3.fasta",
+      "culture_metabolome": "fasta/Blastocystis_ST3.fasta",
       "description": "Blastocystis subtype 3 has been observed in humans and animals (???), this subtype lacks any distinguishing features?, and has been observed in (X) locations with a prevalence of (X)."
     },
     {
       "id": "st4",
       "title": "Subtype 4",
-      "tags": ["human", "animal"],
+      "tags": ["humans", "animals"],
       "image": "images/subtypes/ST4.png",
       "imageAlt": "Illustrative image for Blastocystis subtype 4",
       "imageCredit": "Tan (2008)",
@@ -52,7 +52,7 @@
     {
       "id": "st5",
       "title": "Subtype 5",
-      "tags": ["human", "animal"],
+      "tags": ["humans", "animals"],
       "image": "images/subtypes/ST5.png",
       "imageAlt": "Illustrative image for Blastocystis subtype 5",
       "imageCredit": "",
@@ -64,7 +64,7 @@
     {
       "id": "st6",
       "title": "Subtype 6",
-      "tags": ["human", "animal"],
+      "tags": ["humans", "animals"],
       "image": "images/subtypes/ST6.jpg",
       "imageAlt": "Illustrative image for Blastocystis subtype 6",
       "imageCredit": "Chandrasekaran et al. (2014)",
@@ -76,7 +76,7 @@
     {
       "id": "st7",
       "title": "Subtype 7",
-      "tags": ["human", "animal"],
+      "tags": ["humans", "animals"],
       "image": "images/subtypes/ST7.jpg",
       "imageAlt": "Illustrative image for Blastocystis subtype 7",
       "imageCredit": "Yason and Tan (2018)",
@@ -112,7 +112,7 @@
     {
       "id": "st10",
       "title": "Subtype 10",
-      "tags": [],
+      "tags": ["animals"],
       "image": "",
       "imageAlt": "",
       "imageCredit": "",

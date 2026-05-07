@@ -213,7 +213,7 @@ const renderPublications = (
       tags.forEach((tag) => {
         const tagEl = document.createElement("span");
         tagEl.className = "pub-tag";
-        tagEl.textContent = tag;
+        tagEl.textContent = "#" + tag;
         tagsWrap.appendChild(tagEl);
       });
 

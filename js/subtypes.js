@@ -218,7 +218,7 @@ const createTagList = (tags) => {
   tags.forEach((tag) => {
     const tagEl = document.createElement("span");
     tagEl.className = "pub-tag";
-    tagEl.textContent = tag;
+    tagEl.textContent = "#" + tag;
     tagsWrap.appendChild(tagEl);
   });
 
@@ -281,16 +281,49 @@ const createSubtypeCard = (subtype, index, usedIds) => {
   card.className = "subtype-card";
   card.id = cardId;
 
+  const headder = document.createElement("div"); //displaying the title, tag, and download links
+  headder.className = "subtype-card-headder"; //TODO: create styling that matches here!
+
   const title = document.createElement("h2");
   title.textContent = titleText;
-  card.appendChild(title);
+  headder.appendChild(title);
 
   if (tags.length) {
-    const meta = document.createElement("div");
-    meta.className = "subtype-meta";
-    meta.textContent = `Tags: ${tags.join(", ")}`;
-    card.appendChild(meta);
+    headder.appendChild(createTagList(tags));
   }
+
+  const actions = document.createElement("div");
+  actions.className = "subtype-actions";
+
+  if (fastaHref) {
+    actions.appendChild(
+      createActionLink("Download FASTA", fastaHref, {
+        variant: "solid",
+        download: true,
+      }),
+    );
+  }
+
+  if (cultureMicrobiomeHref) {
+    actions.appendChild(
+      createActionLink("Download Culture microbiome", cultureMicrobiomeHref, {
+        variant: "solid",
+        download: true,
+      }),
+    );
+  }
+
+  if (cultureMicrobiomeHref) {
+    actions.appendChild(
+      createActionLink("Download Culture metabolome", cultureMetabolomeHref, {
+        variant: "solid",
+        download: true,
+      }),
+    );
+  }
+
+  headder.appendChild(actions);
+  card.appendChild(headder);
 
   const body = document.createElement("div");
   body.className = "subtype-body";
@@ -335,69 +368,6 @@ const createSubtypeCard = (subtype, index, usedIds) => {
   const descriptionEl = document.createElement("p");
   descriptionEl.textContent = description || "Description to be added.";
   content.appendChild(descriptionEl);
-
-  if (tags.length) {
-    content.appendChild(createTagList(tags));
-  }
-
-  const actions = document.createElement("div");
-  actions.className = "subtype-actions";
-
-  if (fastaHref) {
-    actions.appendChild(
-      createActionLink("Download FASTA", fastaHref, {
-        variant: "solid",
-        download: true,
-      }),
-    );
-    actions.appendChild(
-      createActionLink("View FASTA", fastaHref, { newTab: true }),
-    );
-  } else {
-    actions.appendChild(
-      createActionLink("FASTA not available", "", { disabled: true }),
-    );
-  }
-
-  actions.appendChild(
-    createActionLink(
-      "Culture microbiome",
-      cultureMicrobiomeHref,
-      cultureMicrobiomeHref ? { newTab: true } : { disabled: true },
-    ),
-  );
-
-  actions.appendChild(
-    createActionLink(
-      "Culture metabolome",
-      cultureMetabolomeHref,
-      cultureMetabolomeHref ? { newTab: true } : { disabled: true },
-    ),
-  );
-
-  content.appendChild(actions);
-
-  if (fastaHref) {
-    const details = document.createElement("details");
-    details.className = "fasta-details";
-    details.dataset.fastaSrc = fastaHref;
-
-    const summary = document.createElement("summary");
-    summary.textContent = `Show FASTA sequences (${titleText})`;
-
-    const pre = document.createElement("pre");
-    pre.className = "fasta-pre";
-    pre.textContent = "(Click to load)";
-
-    details.appendChild(summary);
-    details.appendChild(pre);
-    content.appendChild(details);
-  } else {
-    const note = document.createElement("div");
-    note.className = "details-note";
-    note.textContent = "FASTA not available yet.";
-    content.appendChild(note);
-  }
 
   body.appendChild(content);
   card.appendChild(body);
